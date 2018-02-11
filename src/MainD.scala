@@ -1,8 +1,5 @@
 
 
-import java.text.SimpleDateFormat
-import java.util.Date
-
 import Main.timeBlock
 import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
