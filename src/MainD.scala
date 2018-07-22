@@ -16,49 +16,6 @@ object Main {
     val sc = spark.sparkContext
     sc.setLogLevel("ERROR")
 
-    val songs = loadSongCSV(sc, "input/song_info.csv.gz")
-      .map(_.DURATION).cache()
-    songs.count()
-    songs
-      .map {x=>Math.pow(x, 1)}
-      .map {x=>Math.pow(x, 2)}
-      .map {x=>Math.pow(x, 3)}
-      .map {x=>Math.pow(x, 4)}
-      .map {x=>Math.pow(x, 5)}
-      .map {x=>Math.pow(x, 6)}
-      .map {x=>Math.pow(x, 7)}
-      .map {x=>Math.pow(x, 8)}
-      .count
-
-
-
-
-
-
-
-    timeBlock{songs
-      .map {x=>
-        Math.pow(
-          Math.pow(
-            Math.pow(
-              Math.pow(
-                Math.pow(
-                  Math.pow(
-                    Math.pow(
-                      Math.pow(x, 1), 2), 3), 4), 5), 6), 7), 8)}
-      .count}
-    timeBlock{songs
-      .map {x=>Math.pow(x, 1)}
-      .map {x=>Math.pow(x, 2)}
-      .map {x=>Math.pow(x, 3)}
-      .map {x=>Math.pow(x, 4)}
-      .map {x=>Math.pow(x, 5)}
-      .map {x=>Math.pow(x, 6)}
-      .map {x=>Math.pow(x, 7)}
-      .map {x=>Math.pow(x, 8)}
-      .count}
-
-
     println("\n\n")
     timeBlock{songs
       .count()
